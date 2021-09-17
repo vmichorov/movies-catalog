@@ -1,0 +1,31 @@
+.favourites {
+  height: 447px;
+}
+
+.title {
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 30px;
+}
+
+.movies {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.movie {
+  margin: 0;
+  border: 1px solid black;
+  width: 12%;
+  height: 310px;
+  margin: 0px;
+  background-repeat: no-repeat;
+}
+
+.movie:nth-child(1) {
+  margin-left: 300px;
+}
+
+.movie:last-child {
+  margin-right: 300px;
+}
