@@ -14,21 +14,3 @@
 .title-container h3 {
   padding-top: 27px;
 }
-
-.search-bar {
-  display: flex;
-}
-
-.input {
-  height: 60%;
-  margin: 15px 10px;
-}
-
-.search-field {
-  height: 100%;
-  width: 250px;
-}
-
-.search-btn {
-  height: 100%;
-}
