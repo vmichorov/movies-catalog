@@ -1,0 +1,14 @@
+.details {
+  margin-top: 50px;
+}
+
+.review {
+  margin-left: 200px;
+  margin-top: 35px;
+}
+
+.review-text {
+  width: 650px;
+  height: 150px;
+  resize: none;
+}

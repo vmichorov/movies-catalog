@@ -1,4 +1,5 @@
 import React from "react";
+import DetailsPage from "./DetailsPage";
 
 import Navigation from "./Navigation";
 // import HomePage from "./HomePage";
@@ -11,6 +12,7 @@ class App extends React.Component {
     return (
       <div>
         <Navigation />
+        <DetailsPage />
       </div>
     );
   }
