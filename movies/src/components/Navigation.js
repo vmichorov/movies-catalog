@@ -10,7 +10,9 @@ class Navigation extends React.Component {
     return (
       <div className="navigation">
         <div className="title-container">
-          <h3>My Movie Collection</h3>
+          <a href="/">
+            <h3>My Movie Collection</h3>
+          </a>
         </div>
         <SearchBar />
       </div>

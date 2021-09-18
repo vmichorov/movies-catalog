@@ -1,0 +1,23 @@
+.movie-card {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  min-height: 280px;
+  margin-bottom: 30px;
+}
+
+.img-container {
+  width: 25%;
+}
+
+.movie-details {
+  padding-top: 20px;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.read-more {
+  text-decoration: underline;
+  color: blue;
+}

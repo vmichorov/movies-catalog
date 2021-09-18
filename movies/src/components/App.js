@@ -1,7 +1,8 @@
 import React from "react";
 
 import Navigation from "./Navigation";
-import HomePage from "./HomePage";
+// import HomePage from "./HomePage";
+// import SearchPage from "./SearchPage";
 
 class App extends React.Component {
   state = {};
@@ -10,7 +11,6 @@ class App extends React.Component {
     return (
       <div>
         <Navigation />
-        <HomePage />
       </div>
     );
   }
