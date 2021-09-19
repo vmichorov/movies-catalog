@@ -16,7 +16,6 @@ class SearchBox extends React.Component {
       },
     });
     this.setState({ movies: response.data });
-    console.log("From search page:", this.state.movies);
   };
 
   render() {

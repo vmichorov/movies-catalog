@@ -16,7 +16,6 @@ class Navigation extends React.Component {
       },
     });
     this.setState({ movies: response.data });
-    console.log("From navigation search:", this.state.movies);
   };
 
   render() {
