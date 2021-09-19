@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 const { PORT } = require("./config/index");
 const databaseConfig = require("./config/databaseConfig");
@@ -11,6 +12,7 @@ startApp();
 
 async function startApp() {
   const app = express();
+  app.use(cors());
   await databaseConfig(app);
   app.use(bodyParser.json());
   app.use(storageMiddleware());

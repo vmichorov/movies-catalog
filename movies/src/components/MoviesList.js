@@ -3,12 +3,11 @@ import React from "react";
 import MovieCard from "./MovieCard";
 
 class MoviesList extends React.Component {
-  state = {};
+  state = { movies: [] };
 
   render() {
     return (
       <div>
-        <MovieCard />
         <MovieCard />
       </div>
     );

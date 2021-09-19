@@ -25,6 +25,10 @@ router.post("/create", async (req, res) => {
       title: req.body.title,
       releasedAt: Number(req.body.releasedAt),
       isFavourite: Boolean(req.body.isFavourite),
+      length: Number(req.body.length),
+      genre: req.body.genre,
+      description: req.body.description,
+      imgUrl: req.body.imgUrl,
     };
     const movie = await req.storage.createMovie(movieData);
     res.send(movie);
