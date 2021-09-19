@@ -3,6 +3,7 @@ import axios from "axios";
 
 import "../styles/searchBox.css";
 import SearchBar from "./SearchBar";
+import MovieCard from "./MovieCard";
 
 class SearchBox extends React.Component {
   state = { movies: [] };
@@ -18,11 +19,22 @@ class SearchBox extends React.Component {
     this.setState({ movies: response.data });
   };
 
+  renderMovies(movies) {
+    const result = movies.map((m) => {
+      return <MovieCard movie={m} key={m._id} />;
+    });
+
+    return result;
+  }
+
   render() {
     return (
-      <div className="search-box">
-        <h1 className="title">Search</h1>
-        <SearchBar onSubmit={this.onSearchSubmit} />
+      <div>
+        <div className="search-box">
+          <h1 className="title">Search</h1>
+          <SearchBar onSubmit={this.onSearchSubmit} />
+        </div>
+        {this.renderMovies(this.state.movies)}
       </div>
     );
   }
