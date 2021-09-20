@@ -13,9 +13,10 @@ async function getFavouriteMovies() {
   const favourites = await Movie.find({ isFavourite: true }).lean();
   return favourites;
 }
-async function getMovieById(id) {
-  const movie = await Movie.find({ _id: id }).lean();
-  return movie;
+async function getMovieByTitle(title) {
+  const regex = new RegExp(`${title}`, "i");
+  const movies = await Movie.findOne({ title: { $regex: regex } }).lean();
+  return movies;
 }
 async function getMoviesByTitle(title) {
   const regex = new RegExp(`${title}`, "i");
@@ -26,7 +27,7 @@ async function getMoviesByTitle(title) {
 module.exports = {
   createMovie,
   getAllMovies,
-  getMovieById,
+  getMovieByTitle,
   getFavouriteMovies,
   getMoviesByTitle,
 };

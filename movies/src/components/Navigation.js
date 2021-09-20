@@ -1,32 +1,19 @@
 import React from "react";
-import axios from "axios";
+import { Link } from "react-router-dom";
 
 import "../styles/navigation.css";
-import SearchBar from "./SearchBar";
+import NavigationSearch from "./NavigationSearch";
 
 class Navigation extends React.Component {
-  state = { movies: [] };
-
-  onSearchSubmit = async (title) => {
-    const response = await axios({
-      method: "POST",
-      url: "http://localhost:3000/search",
-      data: {
-        title: title,
-      },
-    });
-    this.setState({ movies: response.data });
-  };
-
   render() {
     return (
       <div className="navigation">
         <div className="title-container">
-          <a href="/">
+          <Link to="/">
             <h3>My Movie Collection</h3>
-          </a>
+          </Link>
         </div>
-        <SearchBar onSubmit={this.onSearchSubmit} />
+        <NavigationSearch />
       </div>
     );
   }

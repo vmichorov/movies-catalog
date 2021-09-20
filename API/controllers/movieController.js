@@ -37,9 +37,9 @@ router.post("/create", async (req, res) => {
   }
 });
 /* get details about a movie */
-router.get("/details/:id", async (req, res) => {
+router.get("/:title", async (req, res) => {
   try {
-    const movie = await req.storage.getMovieById(req.params.id);
+    const movie = await req.storage.getMovieByTitle(req.params.title);
     res.send(movie);
   } catch (err) {
     console.log(err.message);

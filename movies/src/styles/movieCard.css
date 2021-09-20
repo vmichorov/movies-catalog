@@ -1,7 +1,7 @@
 .movie-card {
   display: flex;
-  width: 80%;
-  margin: 0 auto;
+  width: 70%;
+  margin: 30px auto;
   min-height: 280px;
   margin-bottom: 30px;
 }
@@ -15,6 +15,7 @@
   padding-left: 25px;
   display: flex;
   flex-direction: column;
+  width: 80%;
 }
 
 .read-more {

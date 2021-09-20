@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 
 import "../styles/favourites.css";
+import { Link } from "react-router-dom";
 
 class Favourites extends React.Component {
   state = { favourites: [] };
@@ -10,9 +11,9 @@ class Favourites extends React.Component {
     const logos = this.state.favourites.map((f) => {
       return (
         <div key={f._id} className="movie">
-          <a href="/">
+          <Link to={`/movies/${f.title}`}>
             <img src={f.imgUrl} alt="Movie Logo" width="100%" height="100%" />
-          </a>
+          </Link>
         </div>
       );
     });
@@ -21,8 +22,6 @@ class Favourites extends React.Component {
 
   getFavouriteMovies = async () => {
     const response = await axios.get("http://localhost:3000/movies/favourites");
-
-    console.log("data:", response.data);
     this.setState({ favourites: response.data });
   };
 
@@ -33,7 +32,7 @@ class Favourites extends React.Component {
   render() {
     return (
       <div className="favourites">
-        <h1 className="title">Your Favourites</h1>
+        <h1 className="title">Favourite Movies</h1>
         <div className="movies">{this.showLogos()}</div>
       </div>
     );

@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 
 import Navigation from "./Navigation";
 
@@ -19,10 +20,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Navigation />
-        {/* <HomePage /> */}
-        <SearchPage />
-        {/* <DetailsPage /> */}
+        <BrowserRouter>
+          <Navigation />
+          <Route path="/" exact component={HomePage} />
+          <Route path="/search" exact component={SearchPage} />
+          <Route path="/movies/:title" component={DetailsPage} />
+        </BrowserRouter>
       </div>
     );
   }

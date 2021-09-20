@@ -11,6 +11,8 @@
 .movies {
   display: flex;
   justify-content: space-evenly;
+  overflow-y: hidden;
+  overflow-x: auto;
 }
 
 .movie {
